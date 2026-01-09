@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PowerBI.Proxies.Tests/PowerBI.Proxies.Tests.csproj" />
+  <Project Path="PowerBI.Proxies/PowerBI.Proxies.csproj" />
+</Solution>
