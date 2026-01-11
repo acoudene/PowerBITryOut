@@ -1,4 +1,6 @@
 <Solution>
+  <Project Path="AspireApp/AspireApp.AppHost/AspireApp.AppHost.csproj" Id="b7af40e7-08c0-4569-88b2-c05e3a2e1544" />
+  <Project Path="AspireApp/AspireApp.ServiceDefaults/AspireApp.ServiceDefaults.csproj" />
   <Project Path="PowerBI.Proxies.Tests/PowerBI.Proxies.Tests.csproj" />
   <Project Path="PowerBI.Proxies/PowerBI.Proxies.csproj" />
 </Solution>

@@ -14,25 +14,18 @@ public class PowerBICustomizedClientTests
   {
     var azureAd = new AzureAd
     {
-      AuthenticationMode = "<todo_masteruser_or_serviceprincipal>",
+      AuthenticationMode = "serviceprincipal", // masteruser or serviceprincipal
       AuthorityUrl = "https://login.microsoftonline.com/organizations",
       ClientId = "<todo_guid>",
       ScopeBase = new[] { "https://analysis.windows.net/powerbi/api/.default" },
-      PbiUsername = "<todo_username>",
-      PbiPassword = "<todo_password>"
+      ClientSecret = "<todo_client_secret>"
     };
 
     var options = Options.Create(azureAd);
     var aadService = new AadService(options);
     var service = new PbiEmbedService(aadService);
     return service;
-  }
-
-  private static PowerBICustomizedClient GetPowerBICustomizedClient()
-  {
-    var pbiEmbedService = GetPbiEmbedService();
-    return new PowerBICustomizedClient(pbiEmbedService);
-  }
+  }  
 
   [Fact]
   public async Task GetPowerBIClient_can_give_an_instance_from_connection_settings()
